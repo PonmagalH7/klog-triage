@@ -1,3 +1,4 @@
+#include "triage.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -49,8 +50,7 @@ int main(void) {
             *nl = '\0';
 
         unsigned level = pri & 7;
-
-if (level <= 4) {
+if (should_triage(level)) {
     printf("[level=%u seq=%llu t=%.6f] %s\n",
            level, seq, ts_us / 1e6, msg);
     fflush(stdout);
