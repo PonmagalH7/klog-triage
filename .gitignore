@@ -1,1 +1,9 @@
 reader
+# Compiled test executables
+/test_aging
+/test_concurrent
+/test_llm
+/test_llm_10
+/test_queue
+/test_shutdown
+/reader
